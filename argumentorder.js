@@ -22,3 +22,13 @@ const double = n => n * 2;
 const withDouble = map(double);
 console.log(withDouble(arr));
 console.log(withDouble(withDouble(arr)));
+
+// Most specific => least specific
+
+const prop = key => obj => obj[key];
+
+const propName = prop('name');
+
+const people = [{ name: 'Jefe ' }, { name: 'Shirley' }, { name: 'Timmy' }];
+
+console.log(people.map(propName));
