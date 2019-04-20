@@ -20,3 +20,13 @@ const withExuberance = compose(
 );
 
 console.log(withExuberance('I love egghead'));
+
+const pipe = (...fns) => x => fns.reduce((acc, fn) => fn(acc), x);
+
+const withPipedExuberance = pipe(
+  scream,
+  exclaim,
+  repeat
+);
+
+console.log(withPipedExuberance('I love egghead'));
