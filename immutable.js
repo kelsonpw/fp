@@ -53,9 +53,9 @@ class ImmutableGlass {
   }
 }
 
-const mg3 = new ImmutableGlass('water', 100);
-const mg4 = mg3.takeDrink(20);
+const ig1 = new ImmutableGlass('water', 100);
+const ig2 = ig1.takeDrink(20);
 
-console.log(mg3 === mg4);
-console.log(mg3.amount === mg4.amount);
-console.log(mg3.amount, mg4.amount);
+console.log(ig1 === ig2);
+console.log(ig1.amount === ig2.amount);
+console.log(ig1.amount, ig2.amount);
